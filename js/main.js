@@ -7,7 +7,6 @@ class ProductList {
         this.getSumm();//сумма всех товаров
     }
 
-
     _fetchProducts() {
         this.goods = [
             {id: 1, title: 'Notebook', price: 2000},
