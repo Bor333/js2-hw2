@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BurgerShop</title>
+</head>
+<body>
+<form>
+    <h2>Размер</h2>
+    <label>
+        <input type="radio" name="size" value="big">
+        Big
+    </label>
+
+    <label>
+        <input type="radio" name="size" value="small">
+        Small
+    </label>
+</form>
+<form>
+    <h2>Начинка</h2>
+    <label>
+        <input type="radio" name="stuffing" value="cheese">
+        C сыром
+    </label>
+
+    <label>
+        <input type="radio" name="stuffing" value="salad">
+        С салатом
+    </label>
+
+    <label>
+        <input type="radio" name="stuffing" value="potato">
+        С картофелем
+    </label>
+</form>
+<div class="burger-topping">
+    <h2>Дополнительно</h2>
+    <input type="checkbox" id="spice" name="horns">
+    <label for="spice">Приправа</label>
+    <input type="checkbox" id="mayonnaise" name="horns">
+    <label for="mayonnaise">Майонез</label>
+    <br><br>
+    <input type="submit" value="Рассчитать">
+</div>
+<script>
+    "use strict";
+
+
+    document.querySelector('input').addEventListener('click', () => {
+        message.style.visibility = 'visible';
+        message.classList.add('animate_animated', 'animate__fadeInLeftBig');
+    });
+
+    class Hamburger {
+        constructor(size, stuffing) {
+            this.size = size;
+            this.stuffing = stuffing;
+            this.topping = [];
+        }
+
+        addTopping(topping) {
+            if (!this.topping.contains(topping)) {
+                this.topping.push(topping);
+            }
+        }
+
+        removeTopping(topping) {
+            // Убрать добавку
+        }
+
+        getToppings(topping) { // Получить список добавок
+        }
+
+        getSize() { // Узнать размер гамбургера
+        }
+
+        getStuffing() { // Узнать начинку гамбургера
+        }
+
+        calculatePrice() { // Узнать цену
+        }
+
+        calculateCalories() { //
+           // Узнать калорийность
+        }
+    }
+
+</script>
+</body>
+</html>
